@@ -1135,56 +1135,247 @@ arr
 0
 )
 arr
-[1] *= -1;
-    }
-    
-    public static String reformat(int[] arr)
-    {
-    	String input = arr[0] + "_" + arr[1] + "/" + arr[2];
-
-    	if (input.startsWith("0_"))
-        	input = input.substring(2);
-    	
-    	if (input.indexOf("_0/") > 0)
-    		input = input.substring(0, input.indexOf("_0/"));
-    	else if (input.indexOf("0/") == 0)
-    		input = "0";
-    	
-    	if (input.endsWith("/1"))
-    		input = input.substring(0, input.length() - 2);
-    	
-    	return input;
-    }
-
-    public static int gcf(int num1, int num2) {
-		/* i is declared before the for loop because
-		 * it must be returned after the loop.
-		 */
-		int i;
-		/* i can be initialized as either of
-		 * the two inputs because any number
-		 * greater than the smaller of the two
-		 * is inherently invalid. The for loop
-		 * continues while one of the numbers
-		 * is not divisible by i.
-		 */
-		num1 = Math.abs(num1);
-		num2 = Math.abs(num2);
-		for(i = num2; !(isDivisibleBy(num2, i) && isDivisibleBy(num1, i)); i--) {}
-		return i;
-	}
-    
-    public static boolean isDivisibleBy(int dividend, int divisor) {
-		/* An IllegalArgumentException will be thrown when the divisor
-		 * is 0 because you cannot divide by 0.
-		 */
-		if(divisor == 0) {
-			throw new IllegalArgumentException();
-		}
-		if(dividend % divisor == 0) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+[
+1
+] 
+*= 
+-
+1
+;
+}
+public 
+static 
+String 
+reformat
+(
+int
+[
+] 
+arr
+)
+{
+String 
+input 
+= 
+arr
+[
+0
+] 
++ 
+"_" 
++ 
+arr
+[
+1
+] 
++ 
+"/" 
++ 
+arr
+[
+2
+]
+;
+if 
+(
+input
+.
+startsWith
+(
+"0_"
+)
+)
+input 
+= 
+input
+.
+substring
+(
+2
+)
+;
+if 
+(
+input
+.
+indexOf
+(
+"_0/"
+) 
+> 
+0
+)
+input 
+= 
+input
+.
+substring
+(
+0
+, 
+input
+.
+indexOf
+(
+"_0/"
+)
+)
+;
+else 
+if 
+(
+input
+.
+indexOf
+(
+"0/"
+) 
+== 
+0
+)
+input 
+= 
+"0"
+;
+if 
+(
+input
+.
+endsWith
+(
+"/1"
+)
+)
+input 
+= 
+input
+.
+substring
+(
+0
+, 
+input
+.
+length
+(
+) 
+- 
+2
+)
+;
+return 
+input
+;
+}
+public 
+static 
+int 
+gcf
+(
+int 
+num1
+, 
+int 
+num2
+) 
+{
+int 
+i
+;
+num1 
+= 
+Math
+.
+abs
+(
+num1
+)
+;
+num2 
+= 
+Math
+.
+abs
+(
+num2
+)
+;
+for
+(
+i
+= 
+num2
+; 
+!
+(
+isDivisibleBy
+(
+num2
+, 
+i
+) 
+&& 
+isDivisibleBy
+(
+num1
+, 
+i
+)
+)
+; 
+i
+--
+) 
+{
+}
+return 
+i
+;
+}
+public 
+static 
+boolean 
+isDivisibleBy
+(
+int 
+dividend
+, 
+int 
+divisor
+) 
+{
+if
+(
+divisor
+== 
+0
+) 
+{
+throw 
+new 
+IllegalArgumentException
+(
+)
+;
+}
+if
+(
+dividend 
+% 
+divisor 
+== 
+0
+) 
+{
+return 
+true
+;
+} 
+else 
+{
+return 
+false
+;
+}
+}
 }
