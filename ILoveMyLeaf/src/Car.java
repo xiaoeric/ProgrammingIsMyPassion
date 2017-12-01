@@ -24,7 +24,7 @@ public class Car {
 		String trail = "";
 		if(continuous) {
 			prefix = noise.substring(0, noise.toLowerCase().indexOf(suffix));
-			trail = suffix;
+			trail = noise.substring(noise.toLowerCase().indexOf(suffix), noise.toLowerCase().indexOf(suffix) + 2);
 		} else {
 			trail = noise;
 		}
