@@ -2,11 +2,23 @@
 public class Car {
 	String color;
 	String model;
+	int speed;
 	String noise;
-	public Car(String color, String model, String noise) {
+	public Car(String color, String model, String noise, int speed) {
 		this.color = color;
 		this.model = model;
 		this.noise = noise;
+		this.speed = speed;
+	}
+	public void repaint(String color) {
+		this.color = color;
+	}
+	public String getModel() {
+		return model;
+	}
+	public void accelerate(int change) {
+		this.speed += change;
+		System.out.print("vroom");
 	}
 	public void drive() {
 		char alpha = 'a';
